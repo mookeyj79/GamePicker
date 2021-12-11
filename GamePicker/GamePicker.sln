@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Picker", "Game Picker\Game Picker.csproj", "{23EE2248-03DC-4AB0-889E-7D4C320037FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePicker", "GamePicker\GamePicker.csproj", "{BE00A883-95C9-48A8-94CC-BC8DB8FA9C70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{23EE2248-03DC-4AB0-889E-7D4C320037FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23EE2248-03DC-4AB0-889E-7D4C320037FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23EE2248-03DC-4AB0-889E-7D4C320037FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23EE2248-03DC-4AB0-889E-7D4C320037FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE00A883-95C9-48A8-94CC-BC8DB8FA9C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE00A883-95C9-48A8-94CC-BC8DB8FA9C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE00A883-95C9-48A8-94CC-BC8DB8FA9C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE00A883-95C9-48A8-94CC-BC8DB8FA9C70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CBD7BADC-072E-4605-98D2-2D4FDBB2C958}
+		SolutionGuid = {11D7D686-BDDE-4BDF-933F-966EA2C2A3B6}
 	EndGlobalSection
 EndGlobal

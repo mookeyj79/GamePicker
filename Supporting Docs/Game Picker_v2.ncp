@@ -27,7 +27,7 @@
         <Member type="Field">private string _name</Member>
         <Member type="Field">private int _min_num_players</Member>
         <Member type="Field">private int _max_num_players</Member>
-        <Member type="Field">private DateTime _time_to_play</Member>
+        <Member type="Field">private Datetime _time_to_play</Member>
         <Member type="Field">private string _description</Member>
         <Member type="Field">private string _img_path</Member>
         <Member type="Field">private List&lt;string&gt; _categories</Member>
@@ -84,24 +84,18 @@
     <Containers />
     <Relationships>
       <Relationship type="Association" first="1" second="2">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Composition</AssociationType>
       </Relationship>
       <Relationship type="Association" first="1" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Composition</AssociationType>
       </Relationship>
       <Relationship type="Association" first="3" second="4">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>

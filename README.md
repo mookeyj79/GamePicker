@@ -1,2 +1,2 @@
 # GamePicker
-Simple Game Selection Programs
+Simple Game Selection Program

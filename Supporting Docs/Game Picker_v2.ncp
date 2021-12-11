@@ -1,0 +1,112 @@
+<Project>
+  <Name>Game Picker</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.1, Culture=neutral, PublicKeyToken=null">
+    <Name>Game Picker</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="89" top="69" />
+        <Size width="163" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string _name</Member>
+        <Member type="Field">private int _age</Member>
+        <Member type="Constructor">public Player(str name, int age)</Member>
+        <Member type="Property">public str Name { get; set; }</Member>
+        <Member type="Property">public int Age { get; set; }</Member>
+        <Member type="Method">public string PlayerGreeting()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Game</Name>
+        <Access>Public</Access>
+        <Location left="388" top="69" />
+        <Size width="215" height="387" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string _name</Member>
+        <Member type="Field">private int _min_num_players</Member>
+        <Member type="Field">private int _max_num_players</Member>
+        <Member type="Field">private DateTime _time_to_play</Member>
+        <Member type="Field">private string _description</Member>
+        <Member type="Field">private string _img_path</Member>
+        <Member type="Field">private List&lt;string&gt; _categories</Member>
+        <Member type="Field">private int _min_age</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
+        <Member type="Property">public int MinPlayers { get; set; }</Member>
+        <Member type="Property">public int MaxPlayers { get; set; }</Member>
+        <Member type="Property">public DateTime TimeToPlay { get; set; }</Member>
+        <Member type="Property">public string Description { get; set; }</Member>
+        <Member type="Property">public string ImagePath { get; set; }</Member>
+        <Member type="Property">public List&lt;string&gt; Categories { get; set; }</Member>
+        <Member type="Property">public int MinAge { get; set; }</Member>
+        <Member type="Method">public string GetInfo()</Member>
+        <Member type="Method">public string GetFirstPlayer()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Videogame</Name>
+        <Access>Public</Access>
+        <Location left="152" top="461" />
+        <Size width="205" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string _console</Member>
+        <Member type="Field">private string _platform</Member>
+        <Member type="Field">private string _console_img_path</Member>
+        <Member type="Field">private string _platform_img_path</Member>
+        <Member type="Property">public string Console { get; set; }</Member>
+        <Member type="Property">public string Platform { get; set; }</Member>
+        <Member type="Property">public string ConsoleImg { get; set; }</Member>
+        <Member type="Property">public string PlatformImg { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Boardgame</Name>
+        <Access>Public</Access>
+        <Location left="638" top="339" />
+        <Size width="208" height="224" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private DateTime _setup_time</Member>
+        <Member type="Property">public DateTime SetupTime { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CardGame</Name>
+        <Access>Public</Access>
+        <Location left="908" top="391" />
+        <Size width="186" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string _card_type</Member>
+        <Member type="Property">public string CardType { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="1" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

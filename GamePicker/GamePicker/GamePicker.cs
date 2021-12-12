@@ -55,11 +55,11 @@ namespace GamePicker
                 g_title.InnerText = "Solitaire - Klondike";
                 g_min_players.InnerText = "1";
                 g_max_players.InnerText = "1";
-                g_ttp.InnerText = "11m";
+                g_ttp.InnerText = "00:11";
                 g_description.InnerText = "Klondike is a solitaire card game. Klondike is played with a standard 52-card deck, without Jokers. The goal is to get the four suits built onto the foundations from aces up through kings.";
                 g_img_path.InnerText = "./img/games/klondike.png";
                 g_min_age.InnerText = "1";
-                g_setup_time.InnerText = "5m";
+                g_setup_time.InnerText = "00:05";
                 g_card_type.InnerText = "Standard 52";
                 g_card_img.InnerText = "/img/cards/standard_52.png";
 
@@ -69,6 +69,7 @@ namespace GamePicker
         
         private void PopulateGames()
         {
+            
         }
     }
 }

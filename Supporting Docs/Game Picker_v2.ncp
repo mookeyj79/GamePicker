@@ -13,7 +13,7 @@
         <Member type="Field">private string _name</Member>
         <Member type="Field">private int _age</Member>
         <Member type="Constructor">public Player(str name, int age)</Member>
-        <Member type="Property">public str Name { get; set; }</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
         <Member type="Property">public int Age { get; set; }</Member>
         <Member type="Method">public string PlayerGreeting()</Member>
         <Modifier>None</Modifier>

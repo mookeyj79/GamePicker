@@ -8,13 +8,12 @@ namespace GamePicker
 {
     class Game
     {
-        private string _name;
+        private string _title;
         private int _min_num_players;
         private int _max_num_players;
         private DateTime _time_to_play;
         private string _description;
         private string _img_path;
-        private List<string> _categories;
         private int _min_age;
 
         Game(string name, 
@@ -32,7 +31,7 @@ namespace GamePicker
 
         }
 
-        public string Name { get; set; }
+        public string Title { get; set; }
         
         public int MinPlayers { get; set; }
 
@@ -43,8 +42,6 @@ namespace GamePicker
         public string Description { get; set; }
 
         public string ImagePath { get; set; }
-
-        public List<string> Categories { get; set; }
 
         public int MinAge { get; set; }
 

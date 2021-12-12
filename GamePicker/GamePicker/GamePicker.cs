@@ -11,7 +11,8 @@ namespace GamePicker
     class GamePicker
     {
 
-        List<Game> games;
+        public List<Game> games = new List<Game>();
+        public List<Player> players = new List<Player>();
 
         public void GameDBCheck()
         {

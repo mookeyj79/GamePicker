@@ -14,15 +14,10 @@ namespace GamePicker
         [STAThread]
         static void Main()
         {
-            #region PreStartup
-            GamePicker gp = new GamePicker();
-            gp.GameDBCheck();
-            #endregion
-
             #region GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GamePickerForm());
             #endregion
         }
     }

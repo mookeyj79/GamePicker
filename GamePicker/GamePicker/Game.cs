@@ -126,11 +126,11 @@ namespace GamePicker
 
         public String TimeToPlay { 
             get {
-                return _time_to_play.ToString();
+                return _time_to_play.ToString(@"hh\:mm");
             } 
             set
             {
-                _time_to_play = TimeSpan.Parse(value);
+                _time_to_play = TimeSpan.ParseExact(value, @"hh\:mm", null);
             }
         }
 

@@ -43,6 +43,8 @@ namespace GamePicker
             gp.GameDBCheck();
             gp.PopulateGames();
             lbl_info.Text = WelcomeMessage();
+            lbl_game_det1.Text = "";
+            lbl_game_det2.Text = "";
         }
 
         private void btn_player_add_Click(object sender, EventArgs e)
@@ -126,6 +128,13 @@ namespace GamePicker
                 {
                     lbl_game_title.Text = "Sorry, Mate. Couldn't find a game for ya.";
                     tb_game_descr.Text = "";
+                    pb_game_det1.Image = null;
+                    pb_game_det2.Image = null;
+                    pb_game_img.Image = null;
+                    lbl_game_det1.Text = "";
+                    lbl_game_det2.Text = "";
+                    lbl_game_players.Text = "# of Players";
+                    lbl__game_playtime.Text = "Playtime: HH:MM";
                     lbl_info.Text = "Try checking your settings.....or finding more friends....";
                 }
                 else
@@ -133,8 +142,38 @@ namespace GamePicker
                     Random r = new Random();
                     Game found_game = found_games[r.Next(found_games.Count())];
                     lbl_game_title.Text = found_game.Title;
+                    lbl_game_players.Text = String.Format("{0} Player(s)", found_game.MaxPlayers);
                     tb_game_descr.Text = found_game.Description;
                     pb_game_img.Image = Image.FromFile(found_game.ImgPath);
+                    
+                    if (found_game.GetType() == typeof(Boardgame))
+                    {
+                        Boardgame bg = (Boardgame)Convert.ChangeType(found_game, typeof(Boardgame));
+                        lbl__game_playtime.Text = String.Format("Playtime: {0}", bg.TotalTime);
+                        lbl_game_det1.Text = "";
+                        pb_game_det1.Image = null;
+                        lbl_game_det2.Text = "";
+                        pb_game_det2.Image = null;
+                    }
+                    else if (found_game.GetType() == typeof(Cardgame))
+                    {
+                        Cardgame cg = (Cardgame)Convert.ChangeType(found_game, typeof(Cardgame));
+                        lbl__game_playtime.Text = String.Format("Playtime: {0}", cg.TotalTime);
+                        lbl_game_det1.Text = String.Format("Cards: {0}", cg.CardType);
+                        pb_game_det1.Image = Image.FromFile(cg.CardTypeImg);
+                        lbl_game_det2.Text = "";
+                        pb_game_det2.Image = null;
+                    }
+                    else if (found_game.GetType() == typeof(Videogame))
+                    {
+                        Videogame vg = (Videogame)Convert.ChangeType(found_game, typeof(Videogame));
+                        lbl__game_playtime.Text = String.Format("Playtime: {0}", vg.TimeToPlay);
+                        lbl_game_det1.Text = String.Format("Console: {0}", vg.Console);
+                        pb_game_det1.Image = Image.FromFile(vg.ConsoleImgPath);
+                        lbl_game_det2.Text = String.Format("Platform: {0}", vg.Platform);
+                        pb_game_det2.Image = Image.FromFile(vg.PlatformImgPath);
+                    }
+
                     lbl_info.Text = String.Format("Hey! Look! I found a game! If you don't like it, try searching again.", found_games.Count().ToString());
                 }
             }

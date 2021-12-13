@@ -51,12 +51,21 @@ namespace GamePicker
             this.lbl_game_title = new System.Windows.Forms.Label();
             this.tb_game_descr = new System.Windows.Forms.TextBox();
             this.pb_game_img = new System.Windows.Forms.PictureBox();
+            this.lbl_game_players = new System.Windows.Forms.Label();
+            this.lbl__game_playtime = new System.Windows.Forms.Label();
+            this.lbl_game_det1 = new System.Windows.Forms.Label();
+            this.lbl_game_det2 = new System.Windows.Forms.Label();
+            this.pb_game_det1 = new System.Windows.Forms.PictureBox();
+            this.pb_game_det2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_game_img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_game_det1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_game_det2)).BeginInit();
             this.SuspendLayout();
             // 
             // lv_players
             // 
             this.lv_players.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.lv_players.BackColor = System.Drawing.Color.White;
             this.lv_players.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ch_name,
             this.ch_age});
@@ -168,7 +177,7 @@ namespace GamePicker
             // 
             this.lbl_ttp.AutoSize = true;
             this.lbl_ttp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ttp.Location = new System.Drawing.Point(345, 9);
+            this.lbl_ttp.Location = new System.Drawing.Point(296, 9);
             this.lbl_ttp.Name = "lbl_ttp";
             this.lbl_ttp.Size = new System.Drawing.Size(109, 18);
             this.lbl_ttp.TabIndex = 10;
@@ -178,7 +187,7 @@ namespace GamePicker
             // 
             this.tb_ttp_h.BackColor = System.Drawing.Color.White;
             this.tb_ttp_h.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ttp_h.Location = new System.Drawing.Point(363, 34);
+            this.tb_ttp_h.Location = new System.Drawing.Point(314, 34);
             this.tb_ttp_h.MaxLength = 2;
             this.tb_ttp_h.Name = "tb_ttp_h";
             this.tb_ttp_h.Size = new System.Drawing.Size(26, 22);
@@ -191,7 +200,7 @@ namespace GamePicker
             // 
             this.lbl_ttp_colon.AutoSize = true;
             this.lbl_ttp_colon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ttp_colon.Location = new System.Drawing.Point(395, 37);
+            this.lbl_ttp_colon.Location = new System.Drawing.Point(346, 37);
             this.lbl_ttp_colon.Name = "lbl_ttp_colon";
             this.lbl_ttp_colon.Size = new System.Drawing.Size(12, 16);
             this.lbl_ttp_colon.TabIndex = 12;
@@ -200,7 +209,7 @@ namespace GamePicker
             // lbl_ttp_hh
             // 
             this.lbl_ttp_hh.AutoSize = true;
-            this.lbl_ttp_hh.Location = new System.Drawing.Point(366, 59);
+            this.lbl_ttp_hh.Location = new System.Drawing.Point(317, 59);
             this.lbl_ttp_hh.Name = "lbl_ttp_hh";
             this.lbl_ttp_hh.Size = new System.Drawing.Size(23, 13);
             this.lbl_ttp_hh.TabIndex = 14;
@@ -209,7 +218,7 @@ namespace GamePicker
             // lbl_ttp_mm
             // 
             this.lbl_ttp_mm.AutoSize = true;
-            this.lbl_ttp_mm.Location = new System.Drawing.Point(414, 59);
+            this.lbl_ttp_mm.Location = new System.Drawing.Point(365, 59);
             this.lbl_ttp_mm.Name = "lbl_ttp_mm";
             this.lbl_ttp_mm.Size = new System.Drawing.Size(25, 13);
             this.lbl_ttp_mm.TabIndex = 15;
@@ -219,7 +228,7 @@ namespace GamePicker
             // 
             this.tb_ttp_m.BackColor = System.Drawing.Color.White;
             this.tb_ttp_m.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ttp_m.Location = new System.Drawing.Point(413, 34);
+            this.tb_ttp_m.Location = new System.Drawing.Point(364, 34);
             this.tb_ttp_m.MaxLength = 2;
             this.tb_ttp_m.Name = "tb_ttp_m";
             this.tb_ttp_m.Size = new System.Drawing.Size(26, 22);
@@ -232,7 +241,7 @@ namespace GamePicker
             // 
             this.btn_find_game.BackColor = System.Drawing.Color.LimeGreen;
             this.btn_find_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_find_game.Location = new System.Drawing.Point(317, 232);
+            this.btn_find_game.Location = new System.Drawing.Point(270, 237);
             this.btn_find_game.Name = "btn_find_game";
             this.btn_find_game.Size = new System.Drawing.Size(137, 45);
             this.btn_find_game.TabIndex = 17;
@@ -242,13 +251,13 @@ namespace GamePicker
             // 
             // lbl_game_title
             // 
-            this.lbl_game_title.AutoSize = true;
             this.lbl_game_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_game_title.Location = new System.Drawing.Point(12, 312);
+            this.lbl_game_title.Location = new System.Drawing.Point(11, 280);
             this.lbl_game_title.Name = "lbl_game_title";
-            this.lbl_game_title.Size = new System.Drawing.Size(161, 20);
+            this.lbl_game_title.Size = new System.Drawing.Size(205, 50);
             this.lbl_game_title.TabIndex = 18;
             this.lbl_game_title.Text = "Press \"Find Game\"";
+            this.lbl_game_title.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tb_game_descr
             // 
@@ -257,22 +266,83 @@ namespace GamePicker
             this.tb_game_descr.Multiline = true;
             this.tb_game_descr.Name = "tb_game_descr";
             this.tb_game_descr.ReadOnly = true;
-            this.tb_game_descr.Size = new System.Drawing.Size(192, 203);
+            this.tb_game_descr.Size = new System.Drawing.Size(204, 203);
             this.tb_game_descr.TabIndex = 19;
             // 
             // pb_game_img
             // 
-            this.pb_game_img.Location = new System.Drawing.Point(289, 391);
+            this.pb_game_img.Location = new System.Drawing.Point(268, 433);
             this.pb_game_img.Name = "pb_game_img";
-            this.pb_game_img.Size = new System.Drawing.Size(165, 147);
+            this.pb_game_img.Size = new System.Drawing.Size(122, 105);
+            this.pb_game_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_game_img.TabIndex = 20;
             this.pb_game_img.TabStop = false;
+            // 
+            // lbl_game_players
+            // 
+            this.lbl_game_players.AutoSize = true;
+            this.lbl_game_players.Location = new System.Drawing.Point(267, 317);
+            this.lbl_game_players.Name = "lbl_game_players";
+            this.lbl_game_players.Size = new System.Drawing.Size(63, 13);
+            this.lbl_game_players.TabIndex = 21;
+            this.lbl_game_players.Text = "# of Players";
+            // 
+            // lbl__game_playtime
+            // 
+            this.lbl__game_playtime.AutoSize = true;
+            this.lbl__game_playtime.Location = new System.Drawing.Point(267, 338);
+            this.lbl__game_playtime.Name = "lbl__game_playtime";
+            this.lbl__game_playtime.Size = new System.Drawing.Size(89, 13);
+            this.lbl__game_playtime.TabIndex = 22;
+            this.lbl__game_playtime.Text = "Playtime: HH:MM";
+            // 
+            // lbl_game_det1
+            // 
+            this.lbl_game_det1.AutoSize = true;
+            this.lbl_game_det1.Location = new System.Drawing.Point(267, 370);
+            this.lbl_game_det1.Name = "lbl_game_det1";
+            this.lbl_game_det1.Size = new System.Drawing.Size(30, 13);
+            this.lbl_game_det1.TabIndex = 23;
+            this.lbl_game_det1.Text = "Det1";
+            // 
+            // lbl_game_det2
+            // 
+            this.lbl_game_det2.AutoSize = true;
+            this.lbl_game_det2.Location = new System.Drawing.Point(267, 405);
+            this.lbl_game_det2.Name = "lbl_game_det2";
+            this.lbl_game_det2.Size = new System.Drawing.Size(30, 13);
+            this.lbl_game_det2.TabIndex = 24;
+            this.lbl_game_det2.Text = "Det2";
+            // 
+            // pb_game_det1
+            // 
+            this.pb_game_det1.Location = new System.Drawing.Point(373, 354);
+            this.pb_game_det1.Name = "pb_game_det1";
+            this.pb_game_det1.Size = new System.Drawing.Size(32, 29);
+            this.pb_game_det1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_game_det1.TabIndex = 25;
+            this.pb_game_det1.TabStop = false;
+            // 
+            // pb_game_det2
+            // 
+            this.pb_game_det2.Location = new System.Drawing.Point(373, 389);
+            this.pb_game_det2.Name = "pb_game_det2";
+            this.pb_game_det2.Size = new System.Drawing.Size(32, 29);
+            this.pb_game_det2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_game_det2.TabIndex = 26;
+            this.pb_game_det2.TabStop = false;
             // 
             // GamePickerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 563);
+            this.ClientSize = new System.Drawing.Size(414, 563);
+            this.Controls.Add(this.pb_game_det2);
+            this.Controls.Add(this.pb_game_det1);
+            this.Controls.Add(this.lbl_game_det2);
+            this.Controls.Add(this.lbl_game_det1);
+            this.Controls.Add(this.lbl__game_playtime);
+            this.Controls.Add(this.lbl_game_players);
             this.Controls.Add(this.pb_game_img);
             this.Controls.Add(this.tb_game_descr);
             this.Controls.Add(this.lbl_game_title);
@@ -299,6 +369,8 @@ namespace GamePicker
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.GamePickerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_game_img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_game_det1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_game_det2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,6 +400,12 @@ namespace GamePicker
         private System.Windows.Forms.Label lbl_game_title;
         private System.Windows.Forms.TextBox tb_game_descr;
         private System.Windows.Forms.PictureBox pb_game_img;
+        private System.Windows.Forms.Label lbl_game_players;
+        private System.Windows.Forms.Label lbl__game_playtime;
+        private System.Windows.Forms.Label lbl_game_det1;
+        private System.Windows.Forms.Label lbl_game_det2;
+        private System.Windows.Forms.PictureBox pb_game_det1;
+        private System.Windows.Forms.PictureBox pb_game_det2;
     }
 }
 

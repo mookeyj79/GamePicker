@@ -173,14 +173,16 @@ namespace GamePicker
         }
         #endregion
 
-        public string GetInfo()
+        public bool HaveEnoughTime(string time)
         {
-            return "";
-        }
-
-        public Player GetFirstPlayer()
-        {
-            return null;
+            if (_time_to_play > TimeSpan.Parse(time))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

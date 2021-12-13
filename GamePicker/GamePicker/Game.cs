@@ -164,7 +164,8 @@ namespace GamePicker
             }
             set
             {
-                if (value <= 0)
+                _min_age = value;
+                if (_min_age <= 0)
                 {
                     _min_age = 1;
                 }

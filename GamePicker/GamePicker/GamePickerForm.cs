@@ -25,6 +25,7 @@ namespace GamePicker
         private void GamePickerForm_Load(object sender, EventArgs e)
         {
             gp.GameDBCheck();
+            gp.PopulateGames();
             lbl_info.Text = "";
         }
 

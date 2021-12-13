@@ -24,7 +24,7 @@ namespace GamePicker
             }
         }
 
-        public string CardImgType
+        public string CardTypeImg
         {
             get
             {

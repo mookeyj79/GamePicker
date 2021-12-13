@@ -68,9 +68,62 @@ namespace GamePicker
             }
         }
         
-        private void PopulateGames()
+        public void PopulateGames()
         {
-            
+            XmlDocument gamedb = new XmlDocument();
+            gamedb.Load("gamedb.xml");
+            XmlNodeList nodes = gamedb.SelectNodes("GAMES/GAME");
+            foreach (XmlNode node in nodes)
+            {
+                string type = node.ChildNodes[0].InnerText;
+                if (type.ToUpper() == "BOARDGAME")
+                {
+                    Boardgame bg = new Boardgame();
+                    bg.Title = node.SelectSingleNode("TITLE").InnerText;
+                    bg.MinPlayers = Int32.Parse(node.SelectSingleNode("MIN_NUM_PLAYERS").InnerText);
+                    bg.MaxPlayers = Int32.Parse(node.SelectSingleNode("MAX_NUM_PLAYERS").InnerText);
+                    bg.TimeToPlay = node.SelectSingleNode("TIME_TO_PLAY").InnerText;
+                    bg.Description = node.SelectSingleNode("DESCRIPTION").InnerText;
+                    bg.ImgPath = node.SelectSingleNode("IMG_PATH").InnerText;
+                    bg.MinAge = Int32.Parse(node.SelectSingleNode("MIN_AGE").InnerText);
+                    bg.SetupTime = node.SelectSingleNode("SETUP_TIME").InnerText;
+
+                    games.Add(bg);
+                }
+                else if (type.ToUpper() == "CARDGAME")
+                {
+                    Cardgame cg = new Cardgame();
+                    cg.Title = node.SelectSingleNode("TITLE").InnerText;
+                    cg.MinPlayers = Int32.Parse(node.SelectSingleNode("MIN_NUM_PLAYERS").InnerText);
+                    cg.MaxPlayers = Int32.Parse(node.SelectSingleNode("MAX_NUM_PLAYERS").InnerText);
+                    cg.TimeToPlay = node.SelectSingleNode("TIME_TO_PLAY").InnerText;
+                    cg.Description = node.SelectSingleNode("DESCRIPTION").InnerText;
+                    cg.ImgPath = node.SelectSingleNode("IMG_PATH").InnerText;
+                    cg.MinAge = Int32.Parse(node.SelectSingleNode("MIN_AGE").InnerText);
+                    cg.SetupTime = node.SelectSingleNode("SETUP_TIME").InnerText;
+                    cg.CardType = node.SelectSingleNode("CARDS_TYPE").InnerText;
+                    cg.CardTypeImg = node.SelectSingleNode("CARD_IMG").InnerText;
+
+                    games.Add(cg);
+                }
+                else if (type.ToUpper() == "VIDEOGAME")
+                {
+                    Videogame vg = new Videogame();
+                    vg.Title = node.SelectSingleNode("TITLE").InnerText;
+                    vg.MinPlayers = Int32.Parse(node.SelectSingleNode("MIN_NUM_PLAYERS").InnerText);
+                    vg.MaxPlayers = Int32.Parse(node.SelectSingleNode("MAX_NUM_PLAYERS").InnerText);
+                    vg.TimeToPlay = node.SelectSingleNode("TIME_TO_PLAY").InnerText;
+                    vg.Description = node.SelectSingleNode("DESCRIPTION").InnerText;
+                    vg.ImgPath = node.SelectSingleNode("IMG_PATH").InnerText;
+                    vg.MinAge = Int32.Parse(node.SelectSingleNode("MIN_AGE").InnerText);
+                    vg.Console = node.SelectSingleNode("CONSOLE").InnerText;
+                    vg.Platform = node.SelectSingleNode("PLATFORM").InnerText;
+                    vg.ConsoleImgPath = node.SelectSingleNode("CONSOLE_IMG_PATH").InnerText;
+                    vg.PlatformImgPath = node.SelectSingleNode("PLATFORM_IMG_PATH").InnerText;
+
+                    games.Add(vg);
+                }
+            }
         }
     }
 }
